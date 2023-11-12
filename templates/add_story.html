@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+<form method="post" action="/add-story">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" id="title" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" name="author" class="form-control" id="author" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="story" class="form-label">Your story</label>
+    <input type="text" name="story" class="form-control" id="story" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Add story</button>
+</form>
+
+{% endblock %}
